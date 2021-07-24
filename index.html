@@ -23,14 +23,14 @@ ul#Tz_List li:nth-of-type(3) img,ul#Tz_List li:nth-of-type(6) img{left:12px;}
 <div id="Tz_box">
 	<!--Tz_List start-->
 	<ul id="Tz_List">
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" alt="数字图片0" /><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" alt="数字图片0" /><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/d.png" alt="数字图片冒号" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/d.png" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /></li>
-		<li><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /><img src="https://www.jq22.com/demo/jstimegd202105171523/images/0.png" /></li>
+		<li><img src="./0.png" alt="数字图片0" /><img src="./0.png" /></li>
+		<li><img src="./0.png" alt="数字图片0" /><img src="./0.png" /></li>
+		<li><img src="./d.png" alt="数字图片冒号" /></li>
+		<li><img src="./0.png" /><img src="./0.png" /></li>
+		<li><img src="./0.png" /><img src="./0.png" /></li>
+		<li><img src="./d.png" /></li>
+		<li><img src="./0.png" /><img src="./0.png" /></li>
+		<li><img src="./0.png" /><img src="./0.png" /></li>
 	</ul>
 	<!--Tz_List end-->
 </div>
@@ -79,7 +79,7 @@ init();
 function init(){
     for(var i=0;i<liIndex.length;i++){
         var a=liIndex[i];
-        aLi[a].getElementsByTagName("img")[0].src="https://www.jq22.com/demo/jstimegd202105171523/images/"+str.charAt(i)+".png";
+        aLi[a].getElementsByTagName("img")[0].src="./"+str.charAt(i)+".png";
         aLi[a].getElementsByTagName("img")[0].index=str.charAt(i);
         play(aLi[a],i);
     }
@@ -102,14 +102,14 @@ function play(obj,index){
             aImg=obj.getElementsByTagName("img");
             Move(aImg[num],"top",10,-61);
             if(num==1){
-                aImg[num-1].src="https://www.jq22.com/demo/jstimegd202105171523/images/"+str2.charAt(index)+".png";
+                aImg[num-1].src="./"+str2.charAt(index)+".png";
                 aImg[num-1].index=str2.charAt(index);
                 Move(aImg[num-1],"top",10,0,function(){
                     aImg[num].style.top="61px";
                     num--;
                 });
             }else{
-                aImg[num+1].src="https://www.jq22.com/demo/jstimegd202105171523/images/"+str2.charAt(index)+".png";
+                aImg[num+1].src="./"+str2.charAt(index)+".png";
                 aImg[num+1].index=str2.charAt(index);
                 Move(aImg[num+1],"top",10,0,function(){
                     aImg[num].style.top="61px";
